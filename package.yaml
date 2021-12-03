@@ -41,6 +41,11 @@ executables:
     dependencies:
       - adventofcode
       - deepseq
+  binary-diagnostic:
+    source-dirs: 03-binary_diagnostic
+    main: Main.hs
+    dependencies:
+      - adventofcode
 
 tests:
   sonar-sweep-test:
@@ -56,6 +61,12 @@ tests:
     dependencies:
       - adventofcode
       - deepseq
+  binary-diagnostic-test:
+    source-dirs: 03-binary_diagnostic
+    main: Tests.hs
+    ghc-options: -main-is Tests
+    dependencies:
+      - adventofcode
 
 benchmarks:
   sonar-sweep-bench:
@@ -71,3 +82,9 @@ benchmarks:
     dependencies:
       - adventofcode
       - deepseq
+  binary-diagnostic-bench:
+    source-dirs: 03-binary_diagnostic
+    main: Benchmarks.hs
+    ghc-options: -main-is Benchmarks
+    dependencies:
+      - adventofcode
